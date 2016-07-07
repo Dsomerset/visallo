@@ -22,6 +22,7 @@ define([
         });
 
         this.after('teardown', function() {
+            this.trigger('closePreviewVertex', { vertexId: this.attr.vertexId })
             this.$node.remove();
         })
 
